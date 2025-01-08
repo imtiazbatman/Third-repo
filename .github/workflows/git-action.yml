@@ -5,7 +5,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Get the code
-    uses: actions/checkout@v3
+    uses: actions/checkout@v4
     with:
       ref: main 
   - name: installing the nodejs 
@@ -13,7 +13,7 @@ jobs:
     with:
       node-version: 18
   - name: accessing the pakage
-    run: echo "Listing details of package.json file"; ls -ls /home/runner/work/Third-repo/Third-repo/package.json
+    run: echo "Listing details of package.json file"; ls -la
   - name: installing depandencies
     run: npm install
   - name: lint
