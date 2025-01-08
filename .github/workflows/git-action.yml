@@ -6,6 +6,8 @@ jobs:
   steps:
   - name: Get the code
     uses: actions/checkout@v3
+    with:
+      ref: main 
   - name: installing the nodejs 
     uses: actions/setup-node@v4
     with:
