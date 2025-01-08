@@ -1,0 +1,24 @@
+name: deployment 1
+on: push
+jobs:
+ deployment:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Get the code
+    uses: actions/checkout@v3
+  - name: installing depandencies
+    run: npm ci
+  - name: lint
+    run: npm run lint
+  - name: test the code
+    run : npm run test
+  - name: Build code 
+    run: npm run build
+ another-jobs-1:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Get the code
+    uses: actions/checkout@v3
+  - name: test another jobs
+    run: echo "anohter jobs"
+  
