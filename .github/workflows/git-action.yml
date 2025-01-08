@@ -10,6 +10,8 @@ jobs:
     uses: actions/setup-node@v4
     with:
       node-version: 18
+  - name: accessing the pakage
+    run: echo "Listing details of package.json file"; ls -ls /home/runner/work/Third-repo/Third-repo/package.json
   - name: installing depandencies
     run: npm install
   - name: lint
